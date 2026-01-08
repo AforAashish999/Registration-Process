@@ -40,12 +40,12 @@ export default function NavBar() {
     onClick={()=>setRegisterForm(!registerForm)}
      className='bg-blue-600 font-semibold cursor-pointer px-4 py-3 rounded-lg text-white text-sm transition-all duration-150 ease-in
       hover:-translate-y-0.5 hover:scale-102 hover:bg-blue-700 hover:shadow-blue-500/50 hover:shadow-lg '>
-        Registration 
+        Registration
     </button>
 
     {
         registerForm && (
-            <RegisterModal />
+            <RegisterModal closeModal={()=> setRegisterForm(false)} />
         )
     }
 
